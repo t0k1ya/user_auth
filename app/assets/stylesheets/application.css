@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+ .debugger_section {
+   border: solid 0.5px gray;
+   padding: 10px;
+   margin: 30px 10px;
+ }
+
+ /* エラー周り */
+ .error_explanation {
+   color: red;
+ }
+
+ .error_counter {
+   padding: 5px;
+   border-radius: 5px;
+   background-color: pink;
+ }
+
+

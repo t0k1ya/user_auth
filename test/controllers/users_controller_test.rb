@@ -12,4 +12,9 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "Sign Up | #{@base_title}"
   end
 
+  test "should get show" do
+    get edit_user_path(@user)
+    assert_response :success
+  end
+
 end

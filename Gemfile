@@ -5,6 +5,10 @@ ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3'
+# integration test
+gem 'rails-controller-testing', '1.0.4'
+# エラーメッセージの日本語化
+gem 'rails-i18n'
 # ハッシュ関数
 gem 'bcrypt', '~> 3.1.13'
 # Use postgresql as the database for Active Record
