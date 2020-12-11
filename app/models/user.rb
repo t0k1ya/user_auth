@@ -10,4 +10,10 @@ class User < ApplicationRecord
 
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
+
+  # Userモデルにdigestメソッドを持たせる
+  def User.digest(string)
+    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
+    BCrypt::Password.create(string, const: cost)
+  end
 end

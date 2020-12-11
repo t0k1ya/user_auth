@@ -1,0 +1,4 @@
+yamada:
+  name: 山田 孝之
+  email: yamada@example.com
+  password_digest: <%= User.digest('password') %>

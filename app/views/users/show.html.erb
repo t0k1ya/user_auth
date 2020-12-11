@@ -4,3 +4,7 @@
   <p>メールアドレス: <%= @user.email %></p>
 </div>
 <%= image_section @user %>
+<% if logged_in? %>
+  <p><%= link_to "ログアウトする", logout_path, method: :delete %>
+<% else %>
+<% end %>

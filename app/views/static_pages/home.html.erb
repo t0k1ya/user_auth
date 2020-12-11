@@ -1,2 +1,9 @@
-<h1>StaticPages#home</h1>
-<%= link_to "新規会員登録", signup_path %>
+<h1>VINEへようこそ！</h1>
+<% if logged_in? %>
+  <p>ログイン中: <%= current_user.name %></p>
+  <p><%= link_to "マイページへ", current_user %></p>
+  <p><%= link_to "ログアウトする", logout_path, method: :delete %></p>
+<% else %>
+  <p><%= link_to "ログインする", login_path%></p>
+  <p><%= link_to "新規会員登録", signup_path %></p>
+<% end %>
